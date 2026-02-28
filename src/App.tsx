@@ -4,8 +4,8 @@ import localExample from './example.json';
 
 function App() {
   const surveys: Record<string, unknown> = {
-    survey1: 'https://raw.githubusercontent.com/SurveyCompo/examples/main/examples/inputs/source.json',
-    survey2: 'https://raw.githubusercontent.com/SurveyCompo/examples/main/examples/style/source.json',
+    survey1: 'https://raw.githubusercontent.com/cuecatch/examples/main/examples/inputs/source.json',
+    survey2: 'https://raw.githubusercontent.com/cuecatch/examples/main/examples/style/source.json',
     local: JSON.stringify(localExample),
   };
 
@@ -36,9 +36,9 @@ function App() {
   };
 
   useEffect(() => {
-    window.addEventListener('surveychange', onSurveyChange);
+    window.addEventListener('cuechange', onSurveyChange);
     return () => {
-      window.removeEventListener('surveychange', onSurveyChange);
+      window.removeEventListener('cuechange', onSurveyChange);
     };
   }, [sourceName, onSurveyChange]);
 
@@ -58,7 +58,7 @@ function App() {
           <button onClick={() => goNext()}> &#8594; Next</button>
         </div>
         <div className="survey-container">
-          <survey-compo ref={surveyElement} cache="memory" src={surveySource} />
+          <cue-catch ref={surveyElement} cache="memory" src={surveySource} />
         </div>
       </div>
     </>

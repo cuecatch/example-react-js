@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface SurveyCompoAttributes extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
+interface CueCatchAttributes extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> {
   src?: string|unknown
   class?: string;
   ref?: unknown;
@@ -12,7 +12,7 @@ interface SurveyCompoAttributes extends React.DetailedHTMLProps<React.HTMLAttrib
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      'survey-compo': SurveyCompoAttributes;
+      'cue-catch': CueCatchAttributes;
     }
   }
 }
